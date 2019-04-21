@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Link, Route, Switch} from 'react-router-dom';
-import Writers from './components/writers/index';
+import Writers from './components/Writers/Writers';
 class App extends Component {
   /* Note: To start server:  ./node_modules/.bin/json-server --watch store.json --port 3004 */
   constructor() {
