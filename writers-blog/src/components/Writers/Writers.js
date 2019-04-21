@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Link, Route } from 'react-router-dom';
+import { Link, Redirect, Route } from 'react-router-dom';
 import Writer from '../Writer/Writer';
 export default class writers extends Component {
   render() {
@@ -22,7 +22,7 @@ export default class writers extends Component {
               const  {  match }  = props
               const { writerid } = match.params
               const writer = writers.find( writer => writer.id === writerid)              
-              const renderWriter = writer ? <Writer {...props} writer={writer} />  : <div>Writer you are looking for is not found</div>
+              const renderWriter = writer ? <Writer {...props} writer={writer} />  : <Redirect to="/404" />
               return  renderWriter       
             }
           } />
